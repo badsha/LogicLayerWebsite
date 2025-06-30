@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogicLayer - Full-cycle Software Development Solutions</title>
+    <meta name="description" content="Professional software development company offering custom solutions, mobile apps, web development, and digital transformation services. Your dedicated technology partner.">
+    <meta property="og:title" content="LogicLayer - Full-cycle Software Development Solutions">
+    <meta property="og:description" content="Professional software development company offering custom solutions, mobile apps, web development, and digital transformation services.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <span class="brand-name">LogicLayer</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Full-cycle <span class="text-gradient">Software Development</span> Service Company
+                </h1>
+                <p class="hero-subtitle">
+                    Your dedicated partner in creating the best quality custom-made software solutions with top talents who deliver excellence through innovative technology.
+                </p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary btn-lg">Build Your Team</a>
+                    <a href="#contact" class="btn btn-outline btn-lg">Start Your Project</a>
+                </div>
+                <div class="hero-cta">
+                    <p>Are you interested in discussing a project with the CEO or CTO?</p>
+                    <a href="#contact" class="cta-link">Book a Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="client-logos">
+        <div class="container">
+            <h2 class="section-subtitle">Trusted by Industry Leaders</h2>
+            <div class="logos-slider">
+                <div class="logos-track">
+                    <div class="logo-item">TechCorp</div>
+                    <div class="logo-item">InnovateLab</div>
+                    <div class="logo-item">DataFlow</div>
+                    <div class="logo-item">CloudNext</div>
+                    <div class="logo-item">DevSolutions</div>
+                    <div class="logo-item">AppMasters</div>
+                    <div class="logo-item">CodeStream</div>
+                    <div class="logo-item">DigitalForge</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">TechCorp</div>
+                    <div class="logo-item">InnovateLab</div>
+                    <div class="logo-item">DataFlow</div>
+                    <div class="logo-item">CloudNext</div>
+                    <div class="logo-item">DevSolutions</div>
+                    <div class="logo-item">AppMasters</div>
+                    <div class="logo-item">CodeStream</div>
+                    <div class="logo-item">DigitalForge</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Software Solutions Tailored for You</h2>
+                <p class="section-description">
+                    Dedicated to providing you with the best tailored software solution services that help solve your business problems and succeed through digital transformation consultancy.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-category">Remote Extended Team</div>
+                    <h3 class="service-title">Dedicated Development Teams</h3>
+                    <p class="service-description">
+                        Build your custom agile development team with our top-tier software engineers and specialists.
+                    </p>
+                    <a href="#" class="service-link">Read More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-category">Managed Services</div>
+                    <h3 class="service-title">Custom Software Development</h3>
+                    <p class="service-description">
+                        End-to-end custom software development from concept to deployment with cutting-edge technologies.
+                    </p>
+                    <a href="#" class="service-link">Read More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="service-category">Visualization to Deployment</div>
+                    <h3 class="service-title">System Analysis & UI/UX Design</h3>
+                    <p class="service-description">
+                        Comprehensive system analysis and intuitive UI/UX design that drives user engagement and satisfaction.
+                    </p>
+                    <a href="#" class="service-link">Read More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="service-category">Faster Time-to-market</div>
+                    <h3 class="service-title">MVP & Application Development</h3>
+                    <p class="service-description">
+                        Rapid MVP development and scalable application solutions to get your product to market faster.
+                    </p>
+                    <a href="#" class="service-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Unique Solutions That Create an Impact</h2>
+                <p class="section-description">
+                    Explore some of our custom-made software solutions that have left an everlasting impression on our clients and their users.
+                </p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Enterprise Dashboard Software">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Enterprise Dashboard Solution</h3>
+                        <p class="portfolio-description">Business Intelligence dashboard with real-time analytics and reporting capabilities.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Mobile Application Development">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Cross-Platform Mobile App</h3>
+                        <p class="portfolio-description">Native iOS and Android application with seamless user experience and offline capabilities.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cloud Infrastructure Solution">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Cloud Infrastructure Platform</h3>
+                        <p class="portfolio-description">Scalable cloud solution with automated deployment and monitoring systems.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="E-commerce Platform">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <p class="portfolio-description">Full-featured e-commerce solution with payment integration and inventory management.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="AI/ML Solution">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">AI/ML Analytics Platform</h3>
+                        <p class="portfolio-description">Machine learning platform for predictive analytics and automated decision making.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Healthcare Management System">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Healthcare Management System</h3>
+                        <p class="portfolio-description">Comprehensive healthcare platform with patient management and telemedicine features.</p>
+                        <a href="#" class="portfolio-link">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <button class="btn btn-outline">More Case Studies</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="about" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Achievements</h2>
+                <p class="section-description">
+                    Reaching milestones, marking achievements, and delivering software development excellence for over 10 years. LogicLayer is one of the top software firms thanks to our extensive knowledge and experience.
+                </p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="achievement-title">Excellence Award</h3>
+                    <p class="achievement-description">Software Development Excellence 2023</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="achievement-title">ISO Certified</h3>
+                    <p class="achievement-description">ISO 27001:2013 Information Security</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="achievement-title">Top Rated</h3>
+                    <p class="achievement-description">Best Startup Company 2023</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="achievement-title">Global Partner</h3>
+                    <p class="achievement-description">Microsoft Global Partner Network</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Customer Success Stories</h2>
+                <p class="section-description">
+                    Some words and reviews from our clients and their experience in working with one of the top software development firms.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>John Peterson</h4>
+                            <p>CEO, TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "I am very impressed with the technical skills of our team at LogicLayer as well as their dedication to our core product; it has freed me up to concentrate on growing our business."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Sarah Williams</h4>
+                            <p>CTO, InnovateLab</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "The team takes the quality of their work very seriously and proactively suggests improvements and makes sure to cover all aspects of a solution in their delivery."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <p>Founder, DataFlow</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "LogicLayer has always been very prompt and responsive when it came to any issue I faced. Their expertise in modern technologies is outstanding."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Something Amazing Together</h2>
+                <p class="section-description">
+                    Ready to transform your ideas into powerful software solutions? Get in touch with our team today.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <h3>Start Your Project</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                        <select name="service">
+                            <option value="">Select Service</option>
+                            <option value="custom-software">Custom Software Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="web-app">Web Application Development</option>
+                            <option value="ui-ux">UI/UX Design</option>
+                            <option value="devops">DevOps & Cloud Services</option>
+                        </select>
+                        <textarea name="message" rows="4" placeholder="Project Description" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Office Address</h4>
+                                <p>123 Tech Street, Innovation District<br>Silicon Valley, CA 94043</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@logiclayer.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Professional business meeting">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <span class="brand-name">LogicLayer</span>
+                    </div>
+                    <p class="footer-description">
+                        Full-cycle software development service company dedicated to creating innovative solutions that drive business success.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Custom Software Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">Web Application Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">DevOps & Cloud Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 LogicLayer. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-message">
+                <div class="toast-title">Success</div>
+                <div class="toast-description">Your message has been sent successfully!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
