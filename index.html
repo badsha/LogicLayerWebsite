@@ -368,6 +368,11 @@
                 <div class="contact-form-wrapper">
                     <h3>Start Your Project</h3>
                     <form id="contact-form" class="contact-form">
+                        <!-- Add a hidden field for the email subject -->
+                        <input type="hidden" name="subject" value="New Contact Form Submission from LogicLayer">
+                        <!-- Add a honeypot field for spam protection. It should be hidden with CSS. -->
+                        <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
+
                         <div class="form-row">
                             <input type="text" name="firstName" placeholder="First Name" required>
                             <input type="text" name="lastName" placeholder="Last Name" required>

@@ -19,6 +19,7 @@
             headerScrollThreshold: 50,
             animationThreshold: 0.1,
             scrollThrottleLimit: 16, // Approx. 60fps
+            web3FormsAccessKey: '1e518edd-00a2-4b3e-bd90-1c1842bc34a9' // <-- PASTE YOUR KEY HERE
         },
 
         // --- INITIALIZATION ---
@@ -40,7 +41,8 @@
             this.elements.heroBackground = document.querySelector('.hero-background');
             this.elements.navLinks = document.querySelectorAll('a[href^="#"]');
             this.elements.mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            this.elements.animatedElements = document.querySelectorAll('.service-card, .portfolio-card, .achievement-card, .testimonial-card');
+            // Code Quality Fix: Only select elements that exist on the page.
+            this.elements.animatedElements = document.querySelectorAll('.service-card, .portfolio-card');
         },
 
         bindEvents() {
@@ -79,12 +81,15 @@
         handleSmoothScroll(e) {
             e.preventDefault();
             const targetId = e.currentTarget.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            // Only process internal links for smooth scroll
+            if (targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         },
 
@@ -105,6 +110,12 @@
             const form = e.currentTarget;
             const submitButton = form.querySelector('button[type="submit"]');
             const formData = new FormData(form);
+
+            // Honeypot check
+            if (formData.get("botcheck")) {
+                return; // It's a bot, do nothing.
+            }
+
             const data = Object.fromEntries(formData);
 
             // Validation
@@ -122,12 +133,25 @@
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
 
+            // Append access key
+            formData.append("access_key", this.config.web3FormsAccessKey);
+
             try {
-                // Simulate API call
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                console.log('Form Submitted:', data);
-                this.showToast({ title: 'Success', message: 'Your message has been sent successfully!' });
-                form.reset();
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    console.log('Form Submitted:', result);
+                    this.showToast({ title: 'Success', message: 'Your message has been sent successfully!' });
+                    form.reset();
+                } else {
+                    console.error('Form submission error:', result);
+                    this.showToast({ title: 'Error', message: result.message || 'Something went wrong. Please try again.', type: 'error' });
+                }
             } catch (error) {
                 console.error('Form submission error:', error);
                 this.showToast({ title: 'Error', message: 'Something went wrong. Please try again.', type: 'error' });
