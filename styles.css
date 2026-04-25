@@ -1,16 +1,16 @@
 /* CSS Variables */
-/* Energetic Lime & Charcoal */
+/* LogicLayer Deep Electric Blue & Matte Black */
 :root {
-    --primary-color: #84cc16; /* A bright, energetic lime */
-    --primary-hover: #65a30d; /* A deeper lime for hover */
-    --primary-color-rgb: 132, 204, 22; /* RGB for rgba() usage */
-    --primary-gradient-end: #a3e635; /* Brighter lime for gradients */
+    --primary-color: #0077ff; /* A rich, deep electric blue */
+    --primary-hover: #0056b3; /* Darker navy for hover */
+    --primary-color-rgb: 0, 119, 255;
+    --primary-gradient-end: #00d2ff; /* Keeps the cyan highlight for the "Logic" part of the logo */
 
-    --dark-bg: #18181b;       /* A warm, charcoal black */
-    --darker-bg: #131316;     /* A true black for depth */
-    --light-gray: #27272a;   /* A medium-dark gray for cards */
-    --text-gray: #a1a1aa;     /* A soft, neutral gray for text */
-    --border-gray: rgba(255, 255, 255, 0.15);
+    --dark-bg: #09090b;       /* Deeper charcoal */
+    --darker-bg: #030303;     /* True pitch black */
+    --light-gray: #121217;    /* Darker card backgrounds */
+    --text-gray: #94a3b8;     /* Cool-toned slate text */
+    --border-gray: rgba(0, 119, 255, 0.2); /* Subtle blue tint in borders */
 }
 
 /* Reset and Base Styles */
@@ -96,10 +96,13 @@ body {
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
+    /* Adds a subtle blue neon glow */
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
+    box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.5);
 }
 
 .btn-outline {
