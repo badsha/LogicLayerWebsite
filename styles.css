@@ -1,18 +1,18 @@
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --bg: #0a0a08;
-    --surface: #111110;
-    --surface2: #1a1a18;
-    --border: #242420;
-    --accent: #c8f53a;
-    --accent2: #f5a623;
-    --text: #e8e8e0;
-    --muted: #6b6b60;
-    --white: #f5f5ef;
-  }
+:root {
+  --bg: #0a0a08;
+  --surface: #111110;
+  --surface2: #1a1a18;
+  --border: #242420;
+  --accent: #c8f53a;
+  --accent2: #f5a623;
+  --text: #e8e8e0;
+  --muted: #6b6b60;
+  --white: #f5f5ef;
+}
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
   body {
     background: var(--bg);
@@ -47,13 +47,14 @@
     display: flex; align-items: center; gap: 8px;
     text-decoration: none;
   }
-  .logo-mark {
-    width: 28px; height: 28px;
-    background: var(--accent);
-    border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
+  .site-logo {
+    display: block;
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+    mix-blend-mode: screen;
   }
-  .logo-mark svg { width: 16px; height: 16px; }
   .nav-links {
     display: flex; align-items: center; gap: 36px;
     list-style: none;
@@ -75,6 +76,8 @@
     font-weight: 500;
   }
   .nav-cta:hover { background: #d8ff44 !important; color: #0a0a08 !important; }
+
+  /* theme toggle removed */
 
   /* Hero */
   .hero {
@@ -1048,7 +1051,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 16px;
+    overflow: hidden;
   }
   .modal.active {
     display: flex;
@@ -1068,6 +1072,8 @@
     position: relative;
     width: 100%;
     max-width: 640px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -1119,7 +1125,7 @@
   .modal-image img {
     width: 100%;
     height: auto;
-    max-height: 360px;
+    max-height: 280px;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -1155,6 +1161,28 @@
     margin-top: 32px;
     display: flex;
     gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .modal {
+      padding: 12px;
+      align-items: flex-start;
+    }
+    .modal-content {
+      max-height: calc(100vh - 24px);
+      padding: 28px 20px 24px;
+      border-radius: 10px;
+    }
+    .modal-title {
+      font-size: 26px;
+      padding-right: 32px;
+    }
+    .modal-image img {
+      max-height: 220px;
+    }
+    .modal-cta {
+      flex-direction: column;
+    }
   }
 
   @media (max-width: 900px) {
